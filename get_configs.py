@@ -4,7 +4,7 @@ import time
 import os
 
 
-API_URL = "https://api.evavpn.com/v1/user/servers"
+API_URL = "https://api.evavpn.com/connections"
 
 
 HEADERS = {
@@ -65,8 +65,8 @@ def fetch_configs():
         except requests.exceptions.RequestException as e:
             print(f"  [NETWORK ERROR] An error occurred for Region ID {region_id}: {e}")
         
-        print("Waiting for 10 seconds...\n")
-        time.sleep(10)
+        print("Waiting for 5 seconds...\n")
+        time.sleep(5)
 
     return valid_configs
 
