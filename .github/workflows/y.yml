@@ -1,0 +1,60 @@
+# نام Workflow که در تب Actions گیت‌هاب نمایش داده می‌شود
+name: Fetch VPN Configs
+
+on:
+  # اجرای خودکار هر ۶ ساعت یک بار
+  # '0 */6 * * *' یعنی در دقیقه صفرم، هر شش ساعت یک‌بار
+  schedule:
+    - cron: '0 */6 * * *'
+  
+  # این خط به شما اجازه می‌دهد که Workflow را به صورت دستی هم از طریق تب Actions اجرا کنید
+  workflow_dispatch:
+
+jobs:
+  fetch-and-commit:
+    # این job روی یک ماشین مجازی اوبونتو آخرین نسخه اجرا می‌شود
+    runs-on: ubuntu-latest
+
+    # تنظیمات دسترسی برای اینکه Action بتواند در ریپوزیتوری کامیت کند
+    permissions:
+      contents: write
+
+    steps:
+      # مرحله ۱: چک‌اوت کردن کد ریپوزیتوری
+      # این کار باعث می‌شود فایل‌های شما (مثل اسکریپت پایتون) در دسترس ماشین مجازی قرار گیرد
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # مرحله ۲: نصب پایتون
+      # نسخه‌ی پایتون را مشخص می‌کنیم
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      # مرحله ۳: نصب کتابخانه‌های مورد نیاز پایتون
+      # در این مورد فقط کتابخانه requests نیاز است
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      # مرحله ۴: اجرای اسکریپت پایتون
+      # اسکریپت شما اجرا شده و فایل configs.txt را ایجاد یا به‌روزرسانی می‌کند
+      - name: Run the script to fetch configs
+        run: python get_configs.py
+
+      # مرحله ۵: کامیت کردن و پوش کردن تغییرات در ریپوزیتوری
+      # این Action به طور خودکار فایل configs.txt را کامیت و پوش می‌کند
+      - name: Commit and push if there are changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          # پیام کامیت که می‌توانید آن را به دلخواه تغییر دهید
+          commit_message: "chore: Auto-update configs"
+          
+          # فایلی که باید کامیت شود
+          file_pattern: configs.txt
+          
+          # اطلاعات نویسنده کامیت
+          commit_user_name: "GitHub Actions Bot"
+          commit_user_email: "actions@github.com"
