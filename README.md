@@ -22,7 +22,6 @@ This is an independent project and is not officially affiliated with, endorsed b
 
 **By using this script, you acknowledge that you have read, understood, and agree to all the terms and conditions outlined above.**
 
-
+| | sub link |
 |---|---|
-| 💎 | ```https://raw.githubusercontent.com/arshiacomplus/eva-sub/refs/heads/main/configs.txt``` |
-
+| 💎 | ```https://raw.githubusercontent.com/arshiacomplus/WoW-fix/main/Xray-WoW.json``` |
