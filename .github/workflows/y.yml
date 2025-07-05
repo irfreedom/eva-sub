@@ -15,20 +15,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
-        id: setup-python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-
-      - name: Cache pip dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ steps.setup-python.outputs.python-version }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
+          cache: pip
 
       - name: Install dependencies
         run: |
@@ -38,29 +32,17 @@ jobs:
       - name: Run the script to fetch configs
         run: python get_configs.py
 
-      - name: Check for changes
-        id: git-check
+      - name: Commit and push if changes are detected
         run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "actions@github.com"
+          git config --local user.name "arshiacomplus"
+          git config --local user.email "163334604+arshiacomplus@users.noreply.github.com"
+
           git add configs.txt
+
+          # بررسی تغییرات و کامیت
           if git diff --cached --quiet; then
             echo "No changes to commit."
-            echo "changed=false" >> $GITHUB_OUTPUT
           else
-            echo "Changes detected."
-            echo "changed=true" >> $GITHUB_OUTPUT
+            git commit -m "chore: Auto-update configs"
+            git push
           fi
-
-      - name: Pull latest changes
-        if: steps.git-check.outputs.changed == 'true'
-        run: git pull --rebase
-
-      - name: Commit and push
-        if: steps.git-check.outputs.changed == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: Auto-update configs"
-          file_pattern: configs.txt
-          commit_user_name: "GitHub Actions Bot"
-          commit_user_email: "actions@github.com"
