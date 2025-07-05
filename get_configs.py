@@ -175,10 +175,10 @@ def parse_ss_url(ss_url):
 
 
         try:
-            port = int(port_str)
+            port = int(port_str.split("/")[0])
         except ValueError:
-            print(f"Invalid port number: {port_str} in URL: {ss_url}")
-            return None
+            port = int(port_str)
+            
 
         parsed_url = urlparse(ss_url)
 
