@@ -146,14 +146,16 @@ def parse_ss_url(ss_url):
 
         encoded_login_info, server_address_port = login_server_parts
 
+        decoded_login_info_bytes = None
         try:
-            decoded_login_info_bytes = base64.b64decode(encoded_login_info, validate=True)
+            decoded_login_info_bytes = base64.urlsafe_b64decode(encoded_login_info + '===')
         except (base64.binascii.Error, ValueError):
              try:
-                 decoded_login_info_bytes = base64.b64decode(encoded_login_info + '===', validate=True)
+                 decoded_login_info_bytes = base64.b64decode(encoded_login_info + '===')
              except (base64.binascii.Error, ValueError):
-                 print(f"Failed to base64 decode login info: {encoded_login_info}")
+                 print(f"Failed to base64 decode login info using standard/urlsafe methods: {encoded_login_info}")
                  return None
+
 
 
         decoded_login_info = decoded_login_info_bytes.decode('utf-8')
