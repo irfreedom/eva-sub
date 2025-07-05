@@ -38,13 +38,26 @@ jobs:
       - name: Run the script to fetch configs
         run: python get_configs.py
 
-      - name: Pull latest changes (rebase)
+      - name: Check for changes
+        id: git-check
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
-          git pull --rebase
+          git add configs.txt
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected."
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
 
-      - name: Commit and push if there are changes
+      - name: Pull latest changes
+        if: steps.git-check.outputs.changed == 'true'
+        run: git pull --rebase
+
+      - name: Commit and push
+        if: steps.git-check.outputs.changed == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: Auto-update configs"
