@@ -21,3 +21,8 @@ Using configurations obtained from a third-party service may involve security ri
 This is an independent project and is not officially affiliated with, endorsed by, or sponsored by the API service provider (EvaVPN).
 
 **By using this script, you acknowledge that you have read, understood, and agree to all the terms and conditions outlined above.**
+
+
+|---|---|
+| 💎 | ```https://raw.githubusercontent.com/arshiacomplus/eva-sub/refs/heads/main/configs.txt``` |
+
