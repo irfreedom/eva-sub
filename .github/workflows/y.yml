@@ -2,8 +2,8 @@
 name: Fetch VPN Configs
 
 on:
-  # اجرای خودکار هر ۶ ساعت یک بار
-  # '0 */6 * * *' یعنی در دقیقه صفرم، هر شش ساعت یک‌بار
+  # اجرای خودکار هر ۲ ساعت یک بار (بر اساس درخواست شما)
+  # '0 */2 * * *' یعنی در دقیقه صفرم، هر دو ساعت یک‌بار
   schedule:
     - cron: '0 */2 * * *'
 
@@ -48,7 +48,7 @@ jobs:
           pip install requests
 
       # مرحله ۴: اجرای اسکریپت پایتون
-      # اسکریپت شما اجرا شده و فایل configs.txt را ایجاد یا به‌روزرسانی می‌کند
+      # اسکریپت شما اجرا شده و فایل configs.txt و v2ray_configs.json را ایجاد یا به‌روزرسانی می‌کند
       - name: Run the script to fetch configs
         run: python get_configs.py
 
@@ -59,17 +59,17 @@ jobs:
           git config --local user.name "GitHub Actions Bot" # استفاده از نام ربات گیت هاب برای وضوح بیشتر
           git config --local user.email "actions@github.com" # استفاده از ایمیل پیشفرض ربات گیت هاب
 
-          # اضافه کردن فایل تغییر یافته
-          git add configs.txt
+          # *** اضافه کردن هر دو فایل تغییر یافته (text و json) ***
+          git add configs.txt v2ray_configs.json
 
           # بررسی وجود تغییرات برای کامیت
-          # git diff --cached --quiet اگر هیچ تفاوتی نباشد با کد 0 و اگر تغییر باشد با کد 111 خارج می شود
+          # git diff --cached --quiet اگر هیچ تفاوتی در فایل های staged (اضافه شده با git add) نباشد با کد 0 و اگر تغییر باشد با کد 111 خارج می شود.
           # ما می خواهیم اگر تغییر نبود پیام داده و ادامه ندهیم
           if git diff --cached --quiet; then
-            echo "No changes to commit. Skipping commit and push."
+            echo "No changes to commit for configs.txt or v2ray_configs.json. Skipping commit and push."
             exit 0 # خروج موفقیت آمیز از مرحله
           else
-            echo "Changes detected. Committing and pushing."
+            echo "Changes detected in configs.txt or v2ray_configs.json. Committing and pushing."
             # کامیت کردن تغییرات
             git commit -m "chore: Auto-update configs"
 
