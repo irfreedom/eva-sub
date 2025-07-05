@@ -24,4 +24,4 @@ This is an independent project and is not officially affiliated with, endorsed b
 
 | | sub link |
 |---|---|
-| 💎 | ```https://raw.githubusercontent.com/arshiacomplus/WoW-fix/main/Xray-WoW.json``` |
+| 💎 | ```https://raw.githubusercontent.com/arshiacomplus/eva-sub/refs/heads/main/configs.txt``` |
