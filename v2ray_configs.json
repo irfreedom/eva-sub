@@ -30,9 +30,9 @@
                 "settings": {
                     "servers": [
                         {
-                            "address": "89.23.108.8",
+                            "address": "185.161.251.24",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "YUk6MnhyqR5P",
+                            "password": "TBrqMD1FEmGz",
                             "port": 443,
                             "level": 0
                         }
@@ -133,9 +133,9 @@
                 "settings": {
                     "servers": [
                         {
-                            "address": "194.87.216.190",
+                            "address": "194.87.216.189",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "Di9uvgrJlvy2",
+                            "password": "YKfGzaa4djtl",
                             "port": 443,
                             "level": 0
                         }
@@ -236,9 +236,9 @@
                 "settings": {
                     "servers": [
                         {
-                            "address": "81.177.214.101",
+                            "address": "212.87.222.158",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "2AfZ1Gb1S7Hm",
+                            "password": "buzQILurKWHG",
                             "port": 443,
                             "level": 0
                         }
@@ -339,9 +339,9 @@
                 "settings": {
                     "servers": [
                         {
-                            "address": "45.151.62.131",
+                            "address": "212.192.14.250",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "CKR1zUeVOOI0",
+                            "password": "PmYBq8jJNQdg",
                             "port": 443,
                             "level": 0
                         }
@@ -444,7 +444,7 @@
                         {
                             "address": "88.151.192.57",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "4OBdZRk0VM2F",
+                            "password": "O0oKDpAvGiXZ",
                             "port": 443,
                             "level": 0
                         }
@@ -545,9 +545,9 @@
                 "settings": {
                     "servers": [
                         {
-                            "address": "45.95.233.58",
+                            "address": "45.95.233.233",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "9CaNdmstaRwg",
+                            "password": "sQgIeZdMIUSu",
                             "port": 443,
                             "level": 0
                         }
@@ -648,9 +648,9 @@
                 "settings": {
                     "servers": [
                         {
-                            "address": "62.60.234.40",
+                            "address": "62.60.234.152",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "6brXKcKqHqoq",
+                            "password": "nT2397Ny84wz",
                             "port": 443,
                             "level": 0
                         }
@@ -751,9 +751,9 @@
                 "settings": {
                     "servers": [
                         {
-                            "address": "31.129.22.66",
+                            "address": "31.129.22.64",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "63gs171UsoUm",
+                            "password": "QVNOVtDiodMI",
                             "port": 443,
                             "level": 0
                         }
@@ -854,9 +854,9 @@
                 "settings": {
                     "servers": [
                         {
-                            "address": "2.59.162.190",
+                            "address": "46.29.234.168",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "dPI6rNZ0a02h",
+                            "password": "Llsl5NpDxulx",
                             "port": 443,
                             "level": 0
                         }
@@ -957,9 +957,9 @@
                 "settings": {
                     "servers": [
                         {
-                            "address": "185.39.207.52",
+                            "address": "185.39.207.119",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "MQSbiowOl0vz",
+                            "password": "XT2gx78M6toJ",
                             "port": 443,
                             "level": 0
                         }
@@ -1060,9 +1060,9 @@
                 "settings": {
                     "servers": [
                         {
-                            "address": "178.22.31.8",
+                            "address": "195.133.88.107",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "8TvpX6zle6Oo",
+                            "password": "IcWLigeLVc6d",
                             "port": 443,
                             "level": 0
                         }
@@ -1163,9 +1163,9 @@
                 "settings": {
                     "servers": [
                         {
-                            "address": "83.217.9.201",
+                            "address": "62.133.63.18",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "HjDHQSz3zoPa",
+                            "password": "sr5qNbUncklN",
                             "port": 443,
                             "level": 0
                         }
@@ -1266,9 +1266,9 @@
                 "settings": {
                     "servers": [
                         {
-                            "address": "45.141.234.8",
+                            "address": "85.159.229.106",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "Iqf04TZ01p1o",
+                            "password": "cQeugmhvFc3Q",
                             "port": 443,
                             "level": 0
                         }
@@ -1369,9 +1369,9 @@
                 "settings": {
                     "servers": [
                         {
-                            "address": "147.45.179.183",
+                            "address": "89.185.84.14",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "6LaDKVfUAg91",
+                            "password": "sW0EYpyJttxs",
                             "port": 443,
                             "level": 0
                         }
@@ -1472,9 +1472,9 @@
                 "settings": {
                     "servers": [
                         {
-                            "address": "147.45.116.67",
+                            "address": "147.45.116.38",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "tHLIMWFoxZul",
+                            "password": "BWhFxC6XKGKt",
                             "port": 443,
                             "level": 0
                         }
@@ -1575,9 +1575,9 @@
                 "settings": {
                     "servers": [
                         {
-                            "address": "62.60.232.82",
+                            "address": "62.60.232.78",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "ySb1X9KUrO99",
+                            "password": "WiKexLEno8ZA",
                             "port": 443,
                             "level": 0
                         }
@@ -1680,7 +1680,7 @@
                         {
                             "address": "45.12.134.232",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "SYs404emG3ns",
+                            "password": "WGKAoGKY5IGe",
                             "port": 443,
                             "level": 0
                         }
@@ -1783,7 +1783,7 @@
                         {
                             "address": "188.116.20.199",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "snsUmNpy2jE0",
+                            "password": "LEVaSK6rNqab",
                             "port": 443,
                             "level": 0
                         }
@@ -1886,7 +1886,7 @@
                         {
                             "address": "193.201.15.208",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "O8xKXVpkzQlm",
+                            "password": "qvCPoVJ2ot05",
                             "port": 443,
                             "level": 0
                         }
@@ -1987,9 +1987,9 @@
                 "settings": {
                     "servers": [
                         {
-                            "address": "81.19.140.192",
+                            "address": "81.19.140.176",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "jjbtAkyX0zue",
+                            "password": "al6Bwe4DK5ma",
                             "port": 443,
                             "level": 0
                         }
@@ -2090,9 +2090,9 @@
                 "settings": {
                     "servers": [
                         {
-                            "address": "145.249.109.63",
+                            "address": "145.249.109.3",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "R2ooy8hBWuNO",
+                            "password": "98unDvnoJpIk",
                             "port": 443,
                             "level": 0
                         }
@@ -2193,9 +2193,9 @@
                 "settings": {
                     "servers": [
                         {
-                            "address": "77.91.74.84",
+                            "address": "89.221.225.89",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "1wSbBZ10XrQG",
+                            "password": "sO7C1RAbPMOA",
                             "port": 443,
                             "level": 0
                         }
@@ -2298,7 +2298,7 @@
                         {
                             "address": "45.89.55.84",
                             "method": "chacha20-ietf-poly1305",
-                            "password": "7am5eibR5fk0",
+                            "password": "6BhOTrcuXhBH",
                             "port": 443,
                             "level": 0
                         }
